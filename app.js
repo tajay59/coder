@@ -200,6 +200,10 @@ var mssg = message.toString();
 
 
 var array = mssg.split(",");
+	
+
+
+console.log(array[0]+" "+ array[1]+" "+array[2]+" "+array[3]);
 var mssgTopic = array[0].split("/");
 var tpic = topic.split("/");
 //console.log(mssg+""+tpic[2]+" "+mssgTopic[3]+" "+topic);

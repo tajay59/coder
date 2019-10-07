@@ -56,18 +56,18 @@ client.on('connect', function () {
 })
  
 client.on('message', function (topic, message) {
-	console.log("MESSAGE RECEIVED");
+	//console.log("MESSAGE RECEIVED");
     
     // message is Buffer
     var mssg = message.toString();
     
     var array = mssg.split(",");
     var topic = topic.split("/");
-    console.log(topic[3]);
+   // console.log(topic[3]);
     if (topic[3] === "Physics C"){
       updateAll(PhysicsC,array);
     }else if (topic[3] === "Physics B"){
-      console.log("calling update for Physics B")
+    //  console.log("calling update for Physics B")
       updateAll(PhysicsB,array);
     }else if (topic[3] === "Physics A"){
       updateAll(PhysicsA,array);
