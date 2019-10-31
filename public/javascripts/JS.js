@@ -16,12 +16,12 @@ app.controller('dlinks', function($scope) {
       {label: 'Physics B', link: ''},
       {label: 'Physics C', link: ''},
       {label: 'Seminar Room', link: ''},
-      {label: 'PhysicsA', link: ''},
-      {label: 'PhysicsB', link: ''},
-      {label: 'PhysicsC', link: ''},
-      {label: 'SeminarRoom', link: ''}
-      
-      
+      {label: 'P14-LAB', link: ''},  
+      {label: 'Optics-LAB', link: ''},
+      {label: 'Virtual-LAB', link: ''},
+      {label: 'Tutorial Room', link: ''},
+      {label: 'Outside', link: ''},
+
     ],
     
   };
@@ -43,14 +43,20 @@ app.controller('topicList', function($scope) {
       {label: 'Physics B', link: ''},
       {label: 'Physics C', link: ''},
       {label: 'Seminar Room', link: ''},
-      
-      
+	{label: 'P14-LAB', link: ''}, 
+	{label: 'Optics-LAB', link: ''},
+	 {label: 'Virtual-LAB', link: ''},
+	 {label: 'Tutorial Room', link: ''},
+	 {label: 'Outside', link: ''},
+
+	
+
+
       
     ],
     
   };
 });
-
 app.controller('topiccList', function($scope) {
     
   $scope.sub1 = function() {
@@ -67,8 +73,13 @@ app.controller('topiccList', function($scope) {
       {label: 'Physics B', link: ''},
       {label: 'Physics C', link: ''},
       {label: 'Seminar Room', link: ''},
-      
-      
+ 	{label: 'P14-LAB', link:''},     
+	{label: 'Optics-LAB', link: ''},
+	{label: 'Virtual-LAB', link: ''},
+	{label: 'Tutorial Room', link: ''},
+	{label: 'Outside', link: ''},
+
+
       
     ],
     

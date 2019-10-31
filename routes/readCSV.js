@@ -41,6 +41,12 @@ var PhysicsA = new TopicS("Physics A");
 var PhysicsB = new TopicS("Physics B");
 var PhysicsC = new TopicS("Physics C");
 var SeminarRoom = new TopicS("Seminar Room");
+var P14LAB = new TopicS("P14-LAB");
+var OpticsLAB = new TopicS("Optics-LAB");
+var VirtualLAB = new TopicS("Virtual-LAB");
+var TutorialRoom = new TopicS("Tutorial Room");
+var Outside = new TopicS("Outside");
+
 
 var mqtt = require('mqtt')
 var client  = mqtt.connect('http://localhost:1883')
@@ -74,6 +80,21 @@ client.on('message', function (topic, message) {
     }else if (topic[3] === "Seminar Room"){
       updateAll(SeminarRoom,array);
     }
+    else if (topic[3] === "Tutorial Room"){
+	          updateAll(TutorialRoom,array);
+	        }
+    else if (topic[3] === "P14-LAB"){
+		          updateAll(P14LAB,array);
+		        }
+    else if (topic[3] === "Optics-LAB"){
+		          updateAll(OpticsLAB,array);
+		        }
+    else if (topic[3] === "Virtual-Lab"){
+		          updateAll(VirtualLAB,array);
+		        }
+	else if (topic[3] === "Outside"){
+		      updateAll(Outside,array);
+		    }
     //if(topic === "$SYS/broker/log/M/subscribe"){ clientsSubscribedTo(mssg);}else if(topic === "$SYS/broker/log/N"){ new_connections(mssg);}else if(topic === "$SYS/broker/clients/connected"){ updateNumOfConnectedClients(mssg);}
     
     
@@ -105,10 +126,18 @@ router.get('/readCSV', function(req, res, next) {
       res.send(PhysicsB);
     }else if (topic === "Physics A"){
       res.send(PhysicsA);
-    }else if (topic === "Seminar Room"){
-      res.send(SeminarRoom);
-    }
-  //res.sendFile('Physics C.csv', { root: __dirname });
+    }else if (topic === "Seminar Room"){ res.send(SeminarRoom); }
+else if (topic === "Tutorial Room"){ res.send(TutorialRoom); }else if (topic === "P14-LAB"){ res.send(P14LAB);
+    }else if (topic === "Optics-LAB"){
+          res.send(OpticsLAB);
+    }else if (topic === "Virtual-LAB"){
+          res.send(VirtualLAB);
+				    }
+	else if (topic === "Outside"){
+		      res.send(Outside);
+		    }
+	
+	//res.sendFile('Physics C.csv', { root: __dirname });
   //res.json({Lastname:"Edwards\n", Firstname:"Tajay"})
   //res.render('index', { title: 'Express' });
 });
