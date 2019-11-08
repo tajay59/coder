@@ -91,15 +91,8 @@ client.on('message', function (topic, message) {
 		        }
     else if (topic[3] === "Virtual-Lab"){
 		          updateAll(VirtualLAB,array);
-		        }
-	else if (topic[3] === "Outside"){
-		      updateAll(Outside,array);
-		    }
-    //if(topic === "$SYS/broker/log/M/subscribe"){ clientsSubscribedTo(mssg);}else if(topic === "$SYS/broker/log/N"){ new_connections(mssg);}else if(topic === "$SYS/broker/clients/connected"){ updateNumOfConnectedClients(mssg);}
-    
-    
-   //console.log(PhysicsC.CO2);
-    
+		        } else if (topic[3] === "Outside"){ updateAll(Outside,array); } //if(topic === "$SYS/broker/log/M/subscribe"){ clientsSubscribedTo(mssg);}else if(topic === "$SYS/broker/log/N"){ new_connections(mssg);}else if(topic === "$SYS/broker/clients/connected"){ updateNumOfConnectedClients(mssg);}
+    //console.log(PhysicsC.CO2); 
     });
 
 	function updateAll(msg,array){
