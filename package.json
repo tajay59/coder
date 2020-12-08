@@ -14,7 +14,7 @@
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-session": "^1.16.2",
-    "fast-csv": "^3.0.1",
+    "fast-csv": "^4.3.6",
     "forever": "^1.0.0",
     "fs": "0.0.1-security",
     "http-errors": "~1.6.3",
